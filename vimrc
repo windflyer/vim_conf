@@ -42,7 +42,7 @@ set guifont=Monaco:h14
 let mapleader = ','
 nnoremap <C-l> gt
 nnoremap <C-h> gT
-nnoremap <leader>t : table<CR>
+nnoremap <leader>t : tabe<CR>
 
 "taglist {
 let Tlist_Show_One_File=1
@@ -52,6 +52,10 @@ let Tlist_GainFocus_On_ToggleOpen=1
 let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
 nnoremap <leader>tl : Tlist<CR>
 "}
+
+"nerdcommenter {
+
+"
 
 :map <F2> <Esc>:NERDTree<CR>
 :map <F3> <Esc>:Tlist<CR>
