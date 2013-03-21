@@ -8,11 +8,14 @@ filetype indent on
 
 call pathogen#infect()
 
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1                                                                
+set termencoding=utf-8
 set encoding=utf-8
+"set ffs=unix,dos,mac    " set Unix as the standard file type
 set background=dark
 
 set expandtab		" set spaces of tab and indent
-set shiftwidth=4
+set shiftwidth=4    " 1 tab == 4 spaces
 set tabstop=4
 
 set autoindent		" indent automaticaly
@@ -22,11 +25,15 @@ set showmatch		" show code match
 set laststatus=2	" always show status line
 set number			" show line number
 set autoread		" reload the file if modified with another editor
-set ruler
+set ruler           " always show current line
 set go=e
 set cursorline		" 
+set ignorecase      " ignore case when searching
+set magic           " for regular expressions turn magic on
 set hls				" highlight matched words when searching
 set helplang=cn		" language in help	
+
+set so=3
 "set foldmethod=syntax	" enable code folding
 
 
