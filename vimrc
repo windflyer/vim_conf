@@ -43,7 +43,7 @@ set nocompatible
 set t_Co=256
 let g:Powerline_symbols='fancy'
 " }
-set guifont=Monaco:h14
+set guifont=Monaco\ 12
 
 " switch tabpages with Ctrl h/l
 let mapleader = ','
