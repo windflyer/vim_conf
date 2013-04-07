@@ -76,6 +76,12 @@ nnoremap <leader>tl : Tlist<CR>
 let NERDTreeShowHidden=1
 " }
 
+" vim-LaTeX {
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_CompileRule_pdf='xelatex -interaction=nonstopmode $*'
+" }
+
 " open nerdtree
 :map <F2> <Esc>:NERDTree<CR>
 
