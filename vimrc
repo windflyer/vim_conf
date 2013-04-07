@@ -1,26 +1,27 @@
 syntax on			" syntax supporting
 
-colo desert 
-
 filetype on
 filetype plugin on
 filetype indent on
 
+colorscheme desert
+"colorscheme DimRed
+
 call pathogen#infect()
 
+" endcoding settings {
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1                                                                
 set termencoding=utf-8
 set encoding=utf-8
-"set ffs=unix,dos,mac    " set Unix as the standard file type
+set ffs=unix,dos,mac    " set Unix as the standard file type
 set background=dark
+" }
 
 set expandtab		" set spaces of tab and indent
 set shiftwidth=4    " 1 tab == 4 spaces
 set tabstop=4
-
 set autoindent		" indent automaticaly
 set smartindent
-
 set showmatch		" show code match
 set laststatus=2	" always show status line
 set number			" show line number
@@ -35,34 +36,50 @@ set helplang=cn		" language in help
 
 set so=3
 "set foldmethod=syntax	" enable code folding
+"set list lcs=tab:\|\    " show | for tab indent
 
-
-" powerline {
-"set guifont=PowerlineSymbols\ for\ Powerline
-set nocompatible
-set t_Co=256
-let g:Powerline_symbols='fancy'
+" gui vim font setting {
+set guifont=Monaco\ 13  
+if has("macunix")
+    set guifont=Monaco:h14
+endif
 " }
-set guifont=Monaco\ 12
 
-" switch tabpages with Ctrl h/l
+" switch tabpages with Ctrl h/l {
 let mapleader = ','
 nnoremap <C-l> gt
 nnoremap <C-h> gT
 nnoremap <leader>t : tabe<CR>
+" }
 
-"taglist {
+" powerline {
+set nocompatible    " not compatible with vi
+set t_Co=256
+let g:Powerline_symbols='fancy'
+" }
+
+" taglist {
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Use_Right_Window=1
 let Tlist_GainFocus_On_ToggleOpen=1
-let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
+if has("macunix")
+    let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
+endif
 nnoremap <leader>tl : Tlist<CR>
-"}
+" }
 
-"nerdcommenter {
+" nerdcommenter {
+" }
 
-"
+" nerdtree {
+let NERDTreeShowHidden=1
+" }
 
+" open nerdtree
 :map <F2> <Esc>:NERDTree<CR>
+
+" generate tags
+:map <C-F3> <Esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+" open taglist
 :map <F3> <Esc>:Tlist<CR>
