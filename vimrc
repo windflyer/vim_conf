@@ -4,8 +4,20 @@ filetype on
 filetype plugin on
 filetype indent on
 
+" add custom highlight labels {
+if !exists("autocmd_colorscheme_loaded")
+    let autocmd_colorscheme_loaded = 1
+    autocmd ColorScheme * highlight QuesLabel ctermbg=Blue ctermfg=White guibg=Blue guifg=White
+endif
+
+if has("autocmd")
+    if v:version > 701
+        autocmd Syntax * call matchadd('QuesLabel', '\W\zs\(QUES\)')
+    endif
+endif
+" }
+
 colorscheme desert
-"colorscheme DimRed
 
 call pathogen#infect()
 
