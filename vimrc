@@ -7,12 +7,14 @@ filetype indent on
 " add custom highlight labels {
 if !exists("autocmd_colorscheme_loaded")
     let autocmd_colorscheme_loaded = 1
-    autocmd ColorScheme * highlight QuesLabel ctermbg=Blue ctermfg=White guibg=Blue guifg=White
+    autocmd ColorScheme * highlight Ques  ctermbg=Blue ctermfg=White guibg=Blue guifg=White
+    autocmd ColorScheme * highlight MyDbg ctermbg=Red  ctermfg=White guibg=Red  guifg=White
 endif
 
 if has("autocmd")
     if v:version > 701
-        autocmd Syntax * call matchadd('QuesLabel', '\W\zs\(QUES\)')
+        autocmd Syntax * call matchadd('Ques', '\W\zs\(QUES\)')
+        autocmd Syntax * call matchadd('MyDbg', '\W\zs\(NOTE\|INFO\|IDEA\|BUG\)')
     endif
 endif
 " }
@@ -52,7 +54,7 @@ set so=3
 "set list lcs=tab:\|\    " show | for tab indent
 
 " gui vim font setting {
-set guifont=Monaco\ 13  
+set guifont=Monaco\ 12  
 if has("macunix")
     set guifont=Monaco:h14
 endif
