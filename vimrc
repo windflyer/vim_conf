@@ -33,6 +33,7 @@ set ignorecase      " ignore case when searching
 set magic           " for regular expressions turn magic on
 set hls				" highlight matched words when searching
 set helplang=cn		" language in help	
+set colorcolumn=80
 
 set so=3
 "set foldmethod=syntax	" enable code folding
