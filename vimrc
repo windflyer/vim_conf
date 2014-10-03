@@ -19,7 +19,7 @@ if has("autocmd")
 endif
 " }
 
-colorscheme desert
+colorscheme jellybeans
 
 call pathogen#infect()
 
