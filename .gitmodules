@@ -16,6 +16,3 @@
 [submodule "bundle/vim-smali"]
 	path = bundle/vim-smali
 	url = https://github.com/kelwin/vim-smali.git
-[submodule "bundle/vim-latex"]
-	path = bundle/vim-latex
-	url = https://github.com/windflyer/vim-latex.git
