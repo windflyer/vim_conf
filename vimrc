@@ -88,11 +88,11 @@ nnoremap <leader>tl : Tlist<CR>
 " }
 
 " nerdtree {
-let NERDTreeShowHidden=1
+" let NERDTreeShowHidden=1
 " }
 
-" open nerdtree
-:map <F2> <Esc>:NERDTree<CR>
+" toggle nerdtree
+:map <silent> <F2> <Esc>:NERDTreeToggle<CR>
 
 " generate tags
 :map <C-F3> <Esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
