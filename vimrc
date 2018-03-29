@@ -70,7 +70,7 @@ nnoremap <leader>t : tabe<CR>
 " powerline {
 set nocompatible    " not compatible with vi
 set t_Co=256
-let g:Powerline_symbols='fancy'
+" let g:Powerline_symbols='fancy'
 " }
 
 " taglist {
@@ -88,17 +88,11 @@ nnoremap <leader>tl : Tlist<CR>
 " }
 
 " nerdtree {
-let NERDTreeShowHidden=1
+" let NERDTreeShowHidden=1
 " }
 
-" vim-LaTeX {
-let g:tex_flavor='latex'
-let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_CompileRule_pdf='xelatex -interaction=nonstopmode $*'
-" }
-
-" open nerdtree
-:map <F2> <Esc>:NERDTree<CR>
+" toggle nerdtree
+:map <silent> <F2> <Esc>:NERDTreeToggle<CR>
 
 " generate tags
 :map <C-F3> <Esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
