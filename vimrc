@@ -19,12 +19,12 @@ if has("autocmd")
 endif
 " }
 
-colorscheme jellybeans
+colorscheme molokai
 
 call pathogen#infect()
 
 " endcoding settings {
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1                                                                
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set termencoding=utf-8
 set encoding=utf-8
 set ffs=unix,dos,mac    " set Unix as the standard file type
